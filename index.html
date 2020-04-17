@@ -3,7 +3,7 @@
 <html class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PDFObject: A JavaScript utility for embedding PDFs</title>
+<title>Developer Document</title>
 <!-- site analytics, unrelated to any example code presented on this page -->
 <script type="text/javascript" async="" src="./index_files/analytics.js.下载"></script><script async="" src="./index_files/js"></script>
 <script src="./index_files/analytics.js(1).下载"></script>
@@ -45,424 +45,124 @@
 <div id="flex-wrapper">
 <header>
 
-    <h1><a href="https://pdfobject.com/">PDFObject</a></h1>
-    <p>An open-source standards-friendly JavaScript utility for embedding PDF files into HTML documents.</p>
+    <h1><a href="https://pdfobject.com/">Developer Document</a></h1>
+    <p>Standards-friendly Document</p>
+	<br />
     <nav>
         <ul>
-            <li><a data-scroll="" href="https://pdfobject.com/#the-why">Why Use PDFObject?</a></li>
-            <li><a data-scroll="" href="https://pdfobject.com/#browser-support">Browser Support</a></li>
-            <li><a data-scroll="" href="https://pdfobject.com/#changelog">Changelog</a></li>
-            <li><a data-scroll="" href="https://pdfobject.com/#api">API</a></li>
-            <li><a data-scroll="" href="https://pdfobject.com/#use-cases">Common Use Cases</a></li>
-            <li><a data-scroll="" href="https://pdfobject.com/#examples">Examples</a></li>
+			<li><hr></li>
+            <li><a data-scroll="" href="#简介">简介</a></li>
+			<li><a data-scroll="" href="#支持设备">支持设备</a></li>
+			<li><a data-scroll="" href="#开发环境要求">开发环境要求</a></li>
+            <li><a data-scroll="" href="#ShadowSDK快速入门">ShadowSDK快速入门</a></li>
+            <li><a data-scroll="" href="#API">API</a></li>
+            <li><a data-scroll="" href="#FAQ">FAQ</a></li>
+            <li><a data-scroll="" href="#相关链接">相关链接</a></li>
             <li><hr></li>
-            <li><a href="https://pdfobject.com/generator/"><svg class="svg-inline--fa fa-cogs fa-w-20" aria-hidden="true" data-fa-processed="" data-prefix="fas" data-icon="cogs" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z"></path></svg><!-- <i class="fas fa-cogs"></i> --> Code Generator</a></li>
-            <li><a href="https://pdfobject.com/static/"><svg class="svg-inline--fa fa-file-code fa-w-12" aria-hidden="true" data-fa-processed="" data-prefix="fas" data-icon="file-code" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M384 121.941V128H256V0h6.059c6.365 0 12.47 2.529 16.971 7.029l97.941 97.941A24.005 24.005 0 0 1 384 121.941zM248 160c-13.2 0-24-10.8-24-24V0H24C10.745 0 0 10.745 0 24v464c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24V160H248zM123.206 400.505a5.4 5.4 0 0 1-7.633.246l-64.866-60.812a5.4 5.4 0 0 1 0-7.879l64.866-60.812a5.4 5.4 0 0 1 7.633.246l19.579 20.885a5.4 5.4 0 0 1-.372 7.747L101.65 336l40.763 35.874a5.4 5.4 0 0 1 .372 7.747l-19.579 20.884zm51.295 50.479l-27.453-7.97a5.402 5.402 0 0 1-3.681-6.692l61.44-211.626a5.402 5.402 0 0 1 6.692-3.681l27.452 7.97a5.4 5.4 0 0 1 3.68 6.692l-61.44 211.626a5.397 5.397 0 0 1-6.69 3.681zm160.792-111.045l-64.866 60.812a5.4 5.4 0 0 1-7.633-.246l-19.58-20.885a5.4 5.4 0 0 1 .372-7.747L284.35 336l-40.763-35.874a5.4 5.4 0 0 1-.372-7.747l19.58-20.885a5.4 5.4 0 0 1 7.633-.246l64.866 60.812a5.4 5.4 0 0 1-.001 7.879z"></path></svg><!-- <i class="fas fa-file-code"></i> --> Embedding PDFs without JavaScript</a></li>
-            <li><a href="https://github.com/pipwerks/PDFObject/"><svg class="svg-inline--fa fa-github-alt fa-w-15" aria-hidden="true" data-fa-processed="" data-prefix="fab" data-icon="github-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path fill="currentColor" d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path></svg><!-- <i class="fab fa-github-alt"></i> --> GitHub</a></li>
-            <li><a href="https://www.npmjs.com/package/pdfobject/"><svg class="svg-inline--fa fa-npm fa-w-18" aria-hidden="true" data-fa-processed="" data-prefix="fab" data-icon="npm" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z"></path></svg><!-- <i class="fab fa-npm"></i> --> NPM</a></li>
-            <li><a href="https://cdnjs.com/libraries/pdfobject/"><svg class="svg-inline--fa fa-cloud fa-w-20" aria-hidden="true" data-fa-processed="" data-prefix="fas" data-icon="cloud" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M537.585 226.56C541.725 215.836 544 204.184 544 192c0-53.019-42.981-96-96-96-19.729 0-38.065 5.954-53.316 16.159C367.042 64.248 315.288 32 256 32c-88.366 0-160 71.634-160 160 0 2.728.07 5.439.204 8.133C40.171 219.845 0 273.227 0 336c0 79.529 64.471 144 144 144h368c70.692 0 128-57.308 128-128 0-61.93-43.983-113.586-102.415-125.44z"></path></svg><!-- <i class="fas fa-cloud"></i> --> CDNJS</a></li>
-            <li><hr></li>
+            
         </ul>
     </nav>
 
-    <p class="small">The PDFObject utility is © 2008-2018 <a href="http://pipwerks.com/">Philip Hutchison</a>. <a href="http://pipwerks.mit-license.org/">Released with an MIT license</a>. <strong>If you find PDFObject useful, please consider donating via <a href="https://paypal.me/pipwerks"><svg class="svg-inline--fa fa-paypal fa-w-12" aria-hidden="true" data-fa-processed="" data-prefix="fab" data-icon="paypal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4.7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9.7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"></path></svg><!-- <i class="fab fa-paypal"></i> --> paypal.me/pipwerks</a></strong></p>
-
+  
 </header>
 
 <main>
 
-    <section class="hero-pdf">
-        <div class="example-wrapper">
-            <div class="example-code">
-                <style>
-                #example1.pdfobject-container { height: 30rem; border: 1rem solid rgba(0,0,0,.1); }
-                </style>
-                <div id="example1" class=" pdfobject-container"><embed class="pdfobject" src="pdf/sample-3pp.pdf" type="application/pdf" style="overflow: auto; width: 100%; height: 100%;"></div>
-            </div>
-            <div class="example-comments">
-<p><b>1. Create a container to hold your PDF</b></p>
-<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
-
-<p><b>2. Tell PDFObject which PDF to embed, and where to embed it</b></p>
-<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/js/pdfobject.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"/pdf/sample-3pp.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#example1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
-
-<p><b>3. You can optionally use CSS to change the appearance of the containing element, such as height, width, border, margins, etc.</b></p>
-<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style language-css">
-<span class="token selector">.pdfobject-container</span> <span class="token punctuation">{</span> <span class="token property">height</span><span class="token punctuation">:</span> 30rem<span class="token punctuation">;</span> <span class="token property">border</span><span class="token punctuation">:</span> 1rem solid <span class="token function">rgba</span><span class="token punctuation">(</span>0,0,0,.1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span></code></pre>
-            </div>
-        </div><!-- /example-wrapper -->
-    </section>
-
-    <section id="the-what">
-        <p class="question"><b>Question:</b> Is JavaScript required for embedding PDFs in your HTML page?</p>
-        <p class="answer"><b>Answer:</b> No.</p>
-        <p>In fact, here are some examples for <a href="https://pdfobject.com/static/">embedding PDFs in your web page using pure HTML markup without JavaScript</a>, if you'd rather go that route.</p>
-    </section>
-
-    <section id="the-why">
-
-        <h2><a class="deep-link" href="https://pdfobject.com/#the-why">#</a> Why use PDFObject?</h2>
-        
-        <ul>
-
-            <li>
-                <p><b>PDFObject detects browser support for inline/embedded PDFs.</b> <span class="highlight">(In case you were wondering, your browser <span class="pdf-support">supports</span> embedded PDFs. <span class="qualitative-statement">You lucky dog, you!</span>)</span></p>
-
-                <p>If you're working with dynamic HTML, such as a single-page web app, you may need to insert PDFs on-the-fly. However, PDF embedding is not supported by certain browsers. If you insert markup without first checking for PDF support, you could wind up with missing content or a broken UI.</p>
-
-                <p>The PDFObject utility helps you avoid these situations by detecting support for PDF embedding in the browser; if embedding is supported, the PDF is embedded. <b>If embedding is NOT supported by the browser, the PDF will NOT be embedded.</b></p>
-            </li>
-
-            <li>
-                <p><b>By default, PDFObject inserts a fallback link to the PDF when the browser does not support inline PDFs.</b> This ensures your users always have access to your PDF, and is designed to help you write less code. The fallback link can be customized, or the option can be disabled if you prefer.</p>
-            </li>
-
-            <li>
-                <p><b>PDFObject is npm-ready.</b> Modern web apps use npm to manage packages and dependencies. <a href="https://www.npmjs.com/package/pdfobject">PDFObject 2.x is registered with Node Package Manager (npm)</a> and can be loaded dynamically.</p>
-            </li>
-
-            <li>
-                <p><b>PDFObject also makes it easy to specify Adobe's <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf">proprietary "PDF Open Parameters"</a></b>. Be warned these parameters are only supported by Adobe Reader, most PDF readers will ignore the parameters, including the built-in PDF readers in Chrome, Edge, Internet Explorer, and Safari. Read more below.</p>
-            </li>
-
-        </ul>
-
-        <h2><a class="deep-link" href="https://pdfobject.com/#the-why">#</a> What PDFObject <i>doesn't</i> do</h2>
-        
-        <ul>
-            <li>
-                <p><b>PDFObject is not a rendering engine.</b> PDFObject just writes an <code>&lt;embed&gt;</code> element to the page, and relies on the browser or browser plugins to render the PDF. <b>If the browser does not support embedded PDFs, PDFObject is not capable of forcing the browser to render the PDF.</b></p>
-        
-                <p>If you need to force browsers to display a PDF, we suggest using Mozilla's <a href="https://mozilla.github.io/pdf.js/">PDF.js</a>. Note that PDF.js is subject to its own limitations, such as cross-domain security restrictions. PDFObject and PDF.js play well together, there are links to some great PDF.js examples in the <a data-scroll="" href="https://pdfobject.com/#examples">Examples</a> section below.</p>
-            </li>
-        
-            <li>
-                <p><b>PDFObject does not provide the ability to customize the look and feel of the PDF toolbar.</b> The toolbar is controlled by the browser, and will vary widely from browser to browser (Chrome versus Safari versus Firefox, etc.). Some of these browsers provide the ability to show or hide the toolbar, or a feature such as the search field, via PDF Open Parmeters. However, in general the browsers do NOT provide any mechanism for customizing the toolbar. If you really need to customize the toolbar, try forking Mozilla's <a href="https://mozilla.github.io/pdf.js/">PDF.js</a> and customizing it to suit your needs.</p>
-            </li>
-
-            <li>
-                <p><b>PDFObject does not validate the existence of the PDF, or that the PDF is actually rendered</b>. The assumption is that you are specifying a valid URL and the network is functioning normally. PDFObject does not check for 404 errors, and JavaScript cannot detect whether the PDF actually renders, unless you are using PDF.js, which is outside the scope of PDFObject.</p>
-            </li>
-
-            <li>
-                <p><b>PDFObject does not magically implement PDF Open Parameters.</b> As mentioned above, these parameters are not widely supported. The PDF rendering engine either supports them or doesn't — PDFObject cannot force the rendering engine to implement these features.</p>
-            </li>
-        </ul>
-
-    </section>
-
-    <p class="back-to-top"><a data-scroll="" href="https://pdfobject.com/#top"><svg class="svg-inline--fa fa-arrow-alt-circle-up fa-w-16" aria-hidden="true" data-fa-processed="" data-prefix="fas" data-icon="arrow-alt-circle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm292 116V256h70.9c10.7 0 16.1-13 8.5-20.5L264.5 121.2c-4.7-4.7-12.2-4.7-16.9 0l-115 114.3c-7.6 7.6-2.2 20.5 8.5 20.5H212v116c0 6.6 5.4 12 12 12h64c6.6 0 12-5.4 12-12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-up"></i> --> Back to top</a></p>
-
-    <section id="browser-support">
-        <h2><a class="deep-link" href="https://pdfobject.com/#browser-support">#</a> Browser Support</h2>
+    <section id="简介">
+        <h2><a class="deep-link" href="https://pdfobject.com/#browser-support">#</a> 简介</h2>
         <p>PDFObject 2.x is designed for modern browsers, and has been successfully tested in Chrome, Firefox, Safari (macOS and iOS), IE 9-11, and MS Edge. If you find issues or would like to share your own testing results, please <a href="https://github.com/pipwerks/PDFObject">post an issue in GitHub</a>.</p>
         <p><b>IMPORTANT:</b> Browser support for PDFObject does not mean the browser supports PDF embedding! <b>PDFObject only embeds PDFs in browsers that support PDF embedding. Some browsers do not natively support PDF embedding, including Safari for iOS and Internet Explorer [<a href="https://en.wikipedia.org/wiki/Comparison_of_web_browsers#Image_format_support">chart</a>]</b>. For browsers that do not support PDF embedding, PDFObject provides a way for you to display alternate content. See below for details.</p>
     </section>
-
-    <p class="back-to-top"><a data-scroll="" href="https://pdfobject.com/#top"><svg class="svg-inline--fa fa-arrow-alt-circle-up fa-w-16" aria-hidden="true" data-fa-processed="" data-prefix="fas" data-icon="arrow-alt-circle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm292 116V256h70.9c10.7 0 16.1-13 8.5-20.5L264.5 121.2c-4.7-4.7-12.2-4.7-16.9 0l-115 114.3c-7.6 7.6-2.2 20.5 8.5 20.5H212v116c0 6.6 5.4 12 12 12h64c6.6 0 12-5.4 12-12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-up"></i> --> Back to top</a></p>
-
-    <section id="changelog">
-        <h2><a class="deep-link" href="https://pdfobject.com/#changelog">#</a> Changelog</h2>
-        <ul>
-            <li><b>2.1.1, October 2018</b>: Changed handling of iOS to reflect Safari's lack of support for embedding inline PDFs. (In iOS, Safari will only display an image preview of the first page of a PDF, and will not render other pages of the PDF.) Other iOS web browsers use Apple's native WebView to render pages, which leads to the same limitations as Safari. Therefore, PDFObject now assumes any iOS-based web browsers will not support PDF embedding.</li> 
-            <li><b>2.1, October 2018</b>: Changed <code>assumptionMode</code> default from <code>false</code> to <code>true</code>. This will ensure PDFObject 2.x will work for Firefox users without requiring them to change their codebase to enable <code>assumptionMode</code>. All they need to do is load the latest version of PDFObject, the PDFObject utility will take care of the rest.</li> 
-            <li><b>2.1 (dev branch), January 2017</b>: Modified to support Mozilla's removal of <code>navigator.mimeTypes</code> inspection. Added <code>assumptionMode</code> for manual override of PDFObject's default <code>navigator.mimeTypes</code> sniffing.</li>
-            <li><b>2.0, April 2016</b>: Initial release of PDFObject 2.0. Contains breaking changes, and is not compatible with PDFObject 1.x.</li>
-        </ul>
+	
+    <section id="支持设备">
+        <h2><a class="deep-link" href="https://pdfobject.com/#browser-support">#</a> 支持设备</h2>
+        <p>PDFObject 2.x is designed for modern browsers, and has been successfully tested in Chrome, Firefox, Safari (macOS and iOS), IE 9-11, and MS Edge. If you find issues or would like to share your own testing results, please <a href="https://github.com/pipwerks/PDFObject">post an issue in GitHub</a>.</p>
+        <p><b>IMPORTANT:</b> Browser support for PDFObject does not mean the browser supports PDF embedding! <b>PDFObject only embeds PDFs in browsers that support PDF embedding. Some browsers do not natively support PDF embedding, including Safari for iOS and Internet Explorer [<a href="https://en.wikipedia.org/wiki/Comparison_of_web_browsers#Image_format_support">chart</a>]</b>. For browsers that do not support PDF embedding, PDFObject provides a way for you to display alternate content. See below for details.</p>
     </section>
-
-    <p class="back-to-top"><a data-scroll="" href="https://pdfobject.com/#top"><svg class="svg-inline--fa fa-arrow-alt-circle-up fa-w-16" aria-hidden="true" data-fa-processed="" data-prefix="fas" data-icon="arrow-alt-circle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm292 116V256h70.9c10.7 0 16.1-13 8.5-20.5L264.5 121.2c-4.7-4.7-12.2-4.7-16.9 0l-115 114.3c-7.6 7.6-2.2 20.5 8.5 20.5H212v116c0 6.6 5.4 12 12 12h64c6.6 0 12-5.4 12-12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-up"></i> --> Back to top</a></p>
-
-    <section id="api">
-
-        <h2><a class="deep-link" href="https://pdfobject.com/#api">#</a> API</h2>
-
-        <p>PDFObject provides two properties and one method.</p>
-
-        <h3><code>PDFObject.supportsPDFs</code> <span>[property]</span></h3>
-        <p>Returns <code>true</code> or <code>false</code> based on detection of <code>navigator.mimeTypes['application/pdf']</code> and/or ActiveX <code>AcroPDF.PDF</code> or <code>PDF.PdfCtrl</code>.</p>
-        <p>PDFObject <b>does not</b> perform detection for specific vendors (Adobe Reader, FoxIt, PDF.js, etc.). Note: For those who wish to target PDF.js, there is an option in <code>PDFObject.embed()</code> to force use of PDF.js. Read below for more details.</p>
-        <div class="api-example">
-<pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">if</span><span class="token punctuation">(</span>PDFObject<span class="token punctuation">.</span>supportsPDFs<span class="token punctuation">)</span><span class="token punctuation">{</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Yay, this browser supports inline PDFs."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Boo, inline PDFs are not supported by this browser"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-        <p><a href="https://pdfobject.com/examples/detection.html">Demo: Detection of PDF support</a></p>
-        </div><!-- / .api-example -->
-
-        <h3><code>PDFObject.pdfobjectversion</code> <span>[property]</span></h3>
-        <p>Returns the version of PDFObject.</p>
-        <div class="api-example">
-<pre class=" language-javascript"><code class=" language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>PDFObject<span class="token punctuation">.</span>pdfobjectversion<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//"2.0.20160402"</span></code></pre>
-        </div><!-- / .api-example -->
-
-        <h3><code>PDFObject.embed(<i>url [string]</i>, <i>target [mixed]</i>, <i>options [object]</i>)</code> <span>[method]</span></h3>
-        <p>Returns the embedded element (<code>&lt;embed&gt;</code> for most situations, and <code>&lt;iframe&gt;</code> when integrated with PDF.js), or false if unable to embed.</p>
-        <p>The heart of PDFObject, the <code>embed</code> method provides a ton of functionality and flexibility. See <a data-scroll="" href="https://pdfobject.com/#examples">Examples</a> for specific code examples and functioning demos.</p>
-        <div class="api-example">
-<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment">//embeds a PDF and makes it fill the browser window</span>
-PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment">//embeds a PDF into the element "my-container" with no extra options specified</span>
-PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment">//embeds a PDF into the element "my-container" with a few options specified</span>
-<span class="token keyword">var</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
-    height<span class="token punctuation">:</span> <span class="token string">"400px"</span><span class="token punctuation">,</span>
-    pdfOpenParams<span class="token punctuation">:</span> <span class="token punctuation">{</span> view<span class="token punctuation">:</span> <span class="token string">'FitV'</span><span class="token punctuation">,</span> page<span class="token punctuation">:</span> <span class="token string">'2'</span> <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span> </code></pre>
-
-        <p>&nbsp;</p>
-        <h4>Specifying a target HTML node</h4>
-        <p>The <code>target</code> parameter can accept a CSS selector, HTML node, or jQuery object.</p>
-<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment">//passes a CSS selector to specify the target</span>
-PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment">//passes a vanilla HTML node for target</span>
-<span class="token keyword">var</span> mynode <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"someID"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> mynode<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment">//passes a jQuery object (HTML node) for target</span>
-<span class="token keyword">var</span> $node <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#someID"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> $node<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-
-        <p>&nbsp;</p>
-        <h4>Options</h4>
-        <p>The <code>options</code> parameter provides a lot of flexibility.</p>
-        <ul>
-            <li>
-                <h5><b>page</b> [string or number]. Default: <code>null</code></h5>
-                <p>Alias for PDF Open Parameters "page" option. Any number entered here will cause the PDF be opened to the specified page number (if the browser supports it). If left unspecified, the PDF will open on page 1.</p>
-<pre class=" language-javascript"><code class=" language-javascript">PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>page<span class="token punctuation">:</span> <span class="token string">"2"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-            </li>
-            <li>
-                <h5><b>id</b> [string]. Default: <code>null</code></h5>
-                <p>Any string entered here will be appended to the generated <code>&lt;embed&gt;</code> element as the ID. If left unspecified, no ID will be appended.</p>
-<pre class=" language-javascript"><code class=" language-javascript">PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>id<span class="token punctuation">:</span> <span class="token string">"myID"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//outputs &lt;embed src="myfile.pdf" id="myID"&gt;</span></code></pre>
-            </li>
-            <li>
-                <h5><b>width</b> [string]. Default: <code>"100%"</code></h5>
-                <p>Will insert the width as an inline style via the <code>style</code> attribute on the <code>&lt;embed&gt;</code> element. If left unspecified, PDFObject will default to 100%. Is standard CSS, supports all units, including px, %, em, and rem.</p>
-                <p><i>Tip: It's safer to specify dimensions using CSS. See "Specifying dimensions" below.</i></p>
-<pre class=" language-javascript"><code class=" language-javascript">PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>width<span class="token punctuation">:</span> <span class="token string">"500px"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//outputs &lt;embed src="myfile.pdf" style="width:500px;"&gt;</span></code></pre>
-            </li>
-            <li>
-                <h5><b>height</b> [string]. Default: <code>"100%"</code></h5>
-                <p>Will insert the height as an inline style via the <code>style</code> attribute on the target element. If left unspecified, PDFObject will default to 100%. Is standard CSS, supports all units, including px, %, em, and rem.</p>
-                <p><i>Tip: It's safer to specify dimensions using CSS. See "Specifying dimensions" below.</i></p>
-<pre class=" language-javascript"><code class=" language-javascript">PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>height<span class="token punctuation">:</span> <span class="token string">"20rem"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//outputs &lt;embed src="myfile.pdf" style="height:20rem;"&gt;</span></code></pre>
-            </li>
-            <li>
-                <h5><b>fallbackLink</b> [string] or [boolean]. Default: <code>"&lt;p&gt;This browser does not support inline PDFs. Please download the PDF to view it: &lt;a href='[url]'&gt;Download PDF&lt;/a&gt;&lt;/p&gt;"</code></h5>
-                <p>Any string entered here will be inserted into the target element when the browser doesn't support inline PDFs.</p>
-                <ul>
-                    <li>HTML is supported</li>
-                    <li>Use the shortcode <code>[url]</code> to insert the URL of the PDF (as specified via the URL parameter in the <code>embed()</code> method).
-<pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
-fallbackLink<span class="token punctuation">:</span> <span class="token string">"&lt;p&gt;This is a &lt;a href='[url]'&gt;fallback link&lt;/a&gt;&lt;/p&gt;"</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//If browser doesn't support inline PDFs, outputs:</span>
-<span class="token comment">//&lt;p&gt;This is a &lt;a href='myfile.pdf'&gt;fallback link&lt;/a&gt;&lt;/p&gt;</span></code></pre></li>
-                    <li>Entering <code>false</code> will disable the fallback text option and prevent PDFObject from inserting fallback text
-                    <pre class=" language-javascript"><code class=" language-javascript">PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>fallbackLink<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//If browser doesn't support inline PDFs, outputs nothing</span></code></pre></li>
-                </ul>
-            </li>
-            <li>
-                <h5><b>pdfOpenParams</b> [object]. Default: <code>null</code></h5>
-                <p>Allows you to specify Adobe's PDF Open Parameters.</p>
-                <p><b>Warning: These are proprietary and not well supported outside of Adobe products.</b> Most PDF readers support the <code>page</code> parameter, but not much else. PDF.js supports <code>page</code>, <code>zoom</code>, <code>nameddest</code>, and <code>pagemode</code>.</p>
-                <ul>
-                    <li><b><code>page</code></b> is the most widely-supported PDF Open Parameter outside of Adobe products.
-<pre class=" language-javascript"><code class=" language-javascript">PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>pdfOpenParams<span class="token punctuation">:</span> <span class="token punctuation">{</span> page<span class="token punctuation">:</span> <span class="token number">10</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//If supported, will cause the PDF viewer to load</span>
-<span class="token comment">//the PDF and automatically scroll to page 10</span></code></pre>
-                    Note that PDFObject provides a convenient alias for <code>page</code> so you don't need to use the <code>pdfOpenParams</code> child object. All other PDF Open Parameters need to be listed as children of the <code>pdfOpenParams</code> object, as illustrated above.
-<pre class=" language-javascript"><code class=" language-javascript">PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> page<span class="token punctuation">:</span> <span class="token number">10</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//If supported, will cause the PDF viewer to load</span>
-<span class="token comment">//the PDF and automatically scroll to page 10</span></code></pre>
-                    </li>
-                    <li><a href="http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf">Learn more about Adobe's PDF Open Parameters</a></li>
-                    <li><a href="https://github.com/mozilla/pdf.js/wiki/Viewer-options">Learn more about PDF.js's implementation of PDF Open Parameters</a></li>
-                </ul>
-            </li>
-            <li>
-                <h5><b>PDFJS_URL</b> [string]. Default: <code>null</code></h5>
-                <p>If you would like to use PDF.js with PDFObject, you will need to specify the URL of the <a href="https://github.com/mozilla/pdf.js/wiki/Setup-PDF.js-in-a-website">PDF.js viewer HTML file</a>. PDFObject will automatically append the required querystring to the PDF.js viewer HTML file URL. See the <a data-scroll="" href="https://pdfobject.com/#examples">Examples</a> section below for a functioning demo.</p>
-            </li>
-            <li>
-                <h5><b>forcePDFJS</b> [boolean]. Default: <code>false</code></h5>
-                <p>If this boolean is set to <code>true</code> and the <code>PDFJS_URL</code> string is not null, PDFObject will attempt to use PDF.js to embed the PDF in the browser, regardless of the browser's default PDF viewer.</p>
-            </li>
-            <li>
-                <h5><b>assumptionMode</b> [boolean]. Default: <code>true</code></h5>
-                <p>Older browsers require third-party plugins such as Adobe Reader for displaying PDFs. Most newer 'modern' browsers provide PDF support natively, and no longer require plugins. When PDFObject's <code>assumptionMode</code> is set to <code>true</code>, PDFObject will check to see if the browser is considered modern. If yes, PDFObject will assume PDF support is available, will bypass its normal PDF support detection, and will write the PDF embed code to the page. Browsers that are not considered modern will fall back to the default PDFObject behavior — a check will be performed to see if PDF embedding is supported before attempting to insert the PDF embed code. If PDF support is detected, the embed will proceed. If not, the normal fallback behavior will apply.</p>
-                <p><img src="./index_files/assumption-mode-logic.png" alt="Flowchart of logic for assumptionMode"></p>
-                <p><code>assumptionMode</code> is a direct response to Mozilla's decision to remove <code>navigator.mimeTypes</code> support in Firefox. Mozilla is attempting to make Firefox more secure by reducing opportunities for browser fingerprinting. Plugin inspection is a core component of many browser fingerprinting techniques. However, many well-intentioned scripts such as PDFObject query <code>navigator.mimeTypes</code> to determine whether specific media, such as PDFs (<code>navigator.mimeTypes['application/pdf']</code>), Flash SWFs, and specific audio or video codecs are supported.</p>
-            </li>
-        </ul>
-
-        </div><!-- / .api-example -->
-
+	
+    <section id="开发环境要求">
+        <h2><a class="deep-link" href="https://pdfobject.com/#browser-support">#</a> 开发环境要求</h2>
+        <p>PDFObject 2.x is designed for modern browsers, and has been successfully tested in Chrome, Firefox, Safari (macOS and iOS), IE 9-11, and MS Edge. If you find issues or would like to share your own testing results, please <a href="https://github.com/pipwerks/PDFObject">post an issue in GitHub</a>.</p>
+        <p><b>IMPORTANT:</b> Browser support for PDFObject does not mean the browser supports PDF embedding! <b>PDFObject only embeds PDFs in browsers that support PDF embedding. Some browsers do not natively support PDF embedding, including Safari for iOS and Internet Explorer [<a href="https://en.wikipedia.org/wiki/Comparison_of_web_browsers#Image_format_support">chart</a>]</b>. For browsers that do not support PDF embedding, PDFObject provides a way for you to display alternate content. See below for details.</p>
     </section>
+	
+    <section id="ShadowSDK快速入门" class="hero-pdf">
+		<h2><a class="deep-link" href="https://pdfobject.com/#browser-support">#</a> ShadowSDK快速入门</h2>
+		<p>PDFObject 2.x is designed for modern browsers, and has</p>
+        <div class="example-wrapper">
+            <div class="example-code">
+                <style>
+                #API_PDF.pdfobject-container { height: 80rem; border: 1rem solid rgba(0,0,0,.1); }
+                </style>
+                <div id="example1" class=" pdfobject-container"><embed class="pdfobject" src="API.pdf" type="application/pdf" style="overflow: auto; width: 100%; height: 100%;"></div>
+            </div>
+            
+        </div><!-- /example-wrapper -->
+    </section>
+	
+	<section id="API" class="hero-pdf">
+		<h2><a class="deep-link" href="https://pdfobject.com/#browser-support">#</a> API</h2>
+		<p>PDFObject 2.x is designed for modern browsers, and has</p>
+        <div class="example-wrapper">
+            <div class="example-code">
+                <style>
+                #example1.pdfobject-container { height: 80rem; border: 1rem solid rgba(0,0,0,.1); }
+                </style>
+                <div id="example1" class=" pdfobject-container"><embed class="pdfobject" src="API.pdf" type="application/pdf" style="overflow: auto; width: 100%; height: 100%;"></div>
+            </div>
+            
+        </div><!-- /example-wrapper -->
+    </section>
+	
+    <section id="FAQ">
+        <h2><a class="deep-link" href="https://pdfobject.com/#browser-support">#</a> FAQ</h2>
+        <p>PDFObject 2.x is designed for modern browsers, and has been successfully tested in Chrome, Firefox, Safari (macOS and iOS), IE 9-11, and MS Edge. If you find issues or would like to share your own testing results, please <a href="https://github.com/pipwerks/PDFObject">post an issue in GitHub</a>.</p>
+        <p><b>IMPORTANT:</b> Browser support for PDFObject does not mean the browser supports PDF embedding! <b>PDFObject only embeds PDFs in browsers that support PDF embedding. Some browsers do not natively support PDF embedding, including Safari for iOS and Internet Explorer [<a href="https://en.wikipedia.org/wiki/Comparison_of_web_browsers#Image_format_support">chart</a>]</b>. For browsers that do not support PDF embedding, PDFObject provides a way for you to display alternate content. See below for details.</p>
+    </section>
+    
+
 
     <p class="back-to-top"><a data-scroll="" href="https://pdfobject.com/#top"><svg class="svg-inline--fa fa-arrow-alt-circle-up fa-w-16" aria-hidden="true" data-fa-processed="" data-prefix="fas" data-icon="arrow-alt-circle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm292 116V256h70.9c10.7 0 16.1-13 8.5-20.5L264.5 121.2c-4.7-4.7-12.2-4.7-16.9 0l-115 114.3c-7.6 7.6-2.2 20.5 8.5 20.5H212v116c0 6.6 5.4 12 12 12h64c6.6 0 12-5.4 12-12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-up"></i> --> Back to top</a></p>
 
-    <section id="use-cases">
-
-        <h2><a class="deep-link" href="https://pdfobject.com/#use-cases">#</a> Common Use Cases</h2>
-
-        <p>Here are some of the most common use cases for PDFObject. See the <a data-scroll="" href="https://pdfobject.com/#examples">Examples</a> section below for more examples.</p>
-
-        <section class="pdf-test">
-            <h3>Default behavior: the full-browser embed</h3>
-            <div class="example-wrapper">
-                <div class="example-comments">
-                    <p>If you don't specify a target element, PDFObject will default to <code>document.body</code>, which will cause the PDF to fill the entire browser window.</p>
-                    <p>The following two examples have identical functionality.</p>
-                </div>
-                <div class="example-code">
-                    <pre class=" language-javascript"><code class=" language-javascript">PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"/pdf/sample-3pp.pdf"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-                    <p><a href="https://pdfobject.com/examples/full-browser-default.html">Demo: Full-browser embed (no selector specified)</a></p>
-                    <pre class=" language-javascript"><code class=" language-javascript">PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"/pdf/sample-3pp.pdf"</span><span class="token punctuation">,</span> document<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-                    <p><a href="https://pdfobject.com/examples/full-browser-explicit.html">Demo: Full-browser embed (explicit selector)</a></p>
-                </div>
-            </div><!-- /example-wrapper -->
-        </section>
 
 
-        <section class="pdf-test">
-            <h3>Embedding in a sized container</h3>
 
-            <div class="example-wrapper">
-                <div class="example-comments">
-                    <p>By default, PDFObject generates an <code>&lt;embed&gt;</code> element with a width and height of 100%. It will automatically fill the target container.</p>
-                </div>
-                <div class="example-code">
-<pre class=" language-javascript"><code class=" language-javascript">PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//outputs &lt;embed src="myfile.pdf" style="width:100%;height:100%"&gt;</span></code></pre>
-                </div>
-            </div><!-- /example-wrapper -->
+    <section id="相关链接">
 
-            <div class="example-wrapper">
-                <div class="example-comments">
-                    <p>PDFObject allows you to specify dimensions via the <code>options</code> parameter. These dimensions will be appended directly to the <code>&lt;embed&gt;</code> element, as shown here.</p>
-                </div>
-                <div class="example-code">
-<pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
-   width<span class="token punctuation">:</span> <span class="token string">"20rem"</span><span class="token punctuation">,</span>
-   height<span class="token punctuation">:</span> <span class="token string">"20rem"</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//outputs &lt;embed src="myfile.pdf" style="width:20rem;height:20rem"&gt;</span></code></pre>
-                </div>
-            </div><!-- /example-wrapper -->
-
-            <div class="example-wrapper">
-                <div class="example-comments">
-                    <p>If you specify dimensions on the <code>&lt;embed&gt;</code> element directly, you will lose the ability to resize the element via CSS, because the inline styles will always take precedence over the other styles in your file. Therefore it is recommended that you specify dimensions using external CSS rules, as shown here.</p>
-                    <p>Note: PDFObject automatically appends the class <code>pdfobject</code> to the <code>&lt;embed&gt;</code> element, and <code>pdfobject-container</code> to the target element. This helps you target your element in CSS.</p>
-                    <p>In this example, the dimensions of the target element are only specified if the PDF has been embedded (via the <code>pdfobject-container</code> class).</p>
-                </div>
-                <div class="example-code">
-<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style language-css">
-<span class="token comment">/* Only resize the element if PDF is embedded */</span>
-<span class="token selector">.pdfobject-container</span> <span class="token punctuation">{</span>
-   <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
-   <span class="token property">height</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>my-container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
-PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"myfile.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
-                    <p><a href="https://pdfobject.com/examples/passing-selector-styled.html">Demo: Embed a PDF and specify dimensions using CSS</a></p>
-                </div>
-            </div><!-- /example-wrapper -->
-
-        </section>
-
-        <section class="pdf-test">
-            <h3>Page number specified</h3>
-            <div class="example-wrapper">
-                <div class="example-comments">
-                    <p>As previously mentioned, most PDF Open Parameters are not widely supported. However, there is one parameter that enjoys wide support: the <code>page</code> parameter.</p>
-                    <p>If you specify a page number using the <code>page</code> parameter, as shown in this example, the PDF will auto-scroll to the specified page number.</p>
-                </div>
-                <div class="example-code">
-<pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
-page<span class="token punctuation">:</span> <span class="token string">"2"</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"/pdf/sample-3pp.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-                </div>
-            </div><!-- /example-wrapper -->
-        </section>
-
-        <section class="pdf-test">
-            <h3>Additional PDF Open Parameters specified</h3>
-            <div class="example-wrapper">
-                <div class="example-code">
-                <div class="example-comments">
-                    <p>As previously mentioned, most PDF Open Parameters are not widely supported. However, there is one parameter that enjoys wide support: the <code>page</code> parameter.</p>
-                    <p>If you specify a page number using the <code>page</code> parameter, as shown in this example, the PDF will auto-scroll to the specified page number.</p>
-                </div>
-<pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
-    height<span class="token punctuation">:</span> <span class="token string">"400px"</span><span class="token punctuation">,</span>
-    page<span class="token punctuation">:</span> <span class="token string">'2'</span><span class="token punctuation">,</span>
-    pdfOpenParams<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        view<span class="token punctuation">:</span> <span class="token string">'FitV'</span><span class="token punctuation">,</span>
-        pagemode<span class="token punctuation">:</span> <span class="token string">'thumbs'</span><span class="token punctuation">,</span>
-        search<span class="token punctuation">:</span> <span class="token string">'lorem ipsum'</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-PDFObject<span class="token punctuation">.</span><span class="token function">embed</span><span class="token punctuation">(</span><span class="token string">"/pdf/sample-3pp.pdf"</span><span class="token punctuation">,</span> <span class="token string">"#my-container"</span><span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-                        <p><a href="https://pdfobject.com/examples/querystring-URL-with-params.html">Demo: Specifying PDF URL containing querystring, with PDF Open Parameters</a></p>
-                    </div>
-            </div><!-- /example-wrapper -->
-        </section>
-
-    </section><!-- /use-cases -->
-
-    <p class="back-to-top"><a data-scroll="" href="https://pdfobject.com/#top"><svg class="svg-inline--fa fa-arrow-alt-circle-up fa-w-16" aria-hidden="true" data-fa-processed="" data-prefix="fas" data-icon="arrow-alt-circle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm292 116V256h70.9c10.7 0 16.1-13 8.5-20.5L264.5 121.2c-4.7-4.7-12.2-4.7-16.9 0l-115 114.3c-7.6 7.6-2.2 20.5 8.5 20.5H212v116c0 6.6 5.4 12 12 12h64c6.6 0 12-5.4 12-12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-up"></i> --> Back to top</a></p>
-
-    <section id="examples">
-
-        <h2><a class="deep-link" href="https://pdfobject.com/#examples">#</a> Examples</h2>
+        <h2><a class="deep-link" href="https://pdfobject.com/#examples">#</a> 相关链接</h2>
         <p>The following links demonstrate the many ways PDFObject can be utilized.</p>
-
+		
         <ul>
-            <li><a href="https://pdfobject.com/examples/conditional-js-advanced.html">Invoking conditional JavaScript upon successful embed (onclick)</a></li>
-            <li><a href="https://pdfobject.com/examples/conditional-js.html">Invoking conditional JavaScript upon successful embed</a></li>
-            <li><a href="https://pdfobject.com/examples/detection.html">Detection of PDF support</a></li>
-            <li><a href="https://pdfobject.com/examples/embed-multiple-PDFs.html">Embed two PDFs on one HTML page</a></li>
-            <li><a href="https://pdfobject.com/examples/full-browser-default.html">Full-browser embed (no selector specified)</a></li>
-            <li><a href="https://pdfobject.com/examples/full-browser-explicit-pdfparams.html">Full-browser embed (explicit selector) with PDF Open Params specified</a></li>
-            <li><a href="https://pdfobject.com/examples/full-browser-explicit.html">Full-browser embed (explicit selector)</a></li>
-            <li><a href="https://pdfobject.com/examples/passing-element-jquery-styled.html">Passing jQuery element, CSS styles applied</a></li>
-            <li><a href="https://pdfobject.com/examples/passing-element-jquery.html">Passing jQuery element</a></li>
-            <li><a href="https://pdfobject.com/examples/passing-element-styled.html">Passing vanilla HTML element, CSS styles applied</a></li>
-            <li><a href="https://pdfobject.com/examples/passing-element.html">Passing vanilla HTML element</a></li>
-            <li><a href="https://pdfobject.com/examples/passing-selector-styled.html">Passing CSS selector, CSS styles applied</a></li>
-            <li><a href="https://pdfobject.com/examples/passing-selector.html">Passing CSS selector</a></li>
-            <!-- <li><a href="examples/pdfjs-forced-with-querystring.html">PDF.js (forced) with querystring</a></li> -->
-            <li><a href="https://pdfobject.com/examples/pdfjs-forced.html">PDF.js (forced)</a></li>
-            <li><a href="https://pdfobject.com/examples/pdfjs.html">PDF.js fallback</a></li>
-            <li><a href="https://pdfobject.com/examples/querystring-URL-with-params.html">Specifying PDF URL containing querystring, with PDF Open Parameters</a></li>
-            <li><a href="https://pdfobject.com/examples/querystring-URL.html">Specifying PDF URL containing querystring</a></li>
-            <li><a href="https://pdfobject.com/examples/replace-PDF-with-second-PDF.html">Replace one PDF with another</a></li>
-            <li><a href="https://pdfobject.com/examples/specifying-custom-fallback-link.html">Specifying custom fallback link</a></li>
+            <li><a href="https://pdfobject.com/examples/conditional-js-advanced.html">影创官网</a></li>
+            <li><a href="https://pdfobject.com/examples/conditional-js.html">ShadowSDK下载链接</a></li>
+            <li><a href="https://pdfobject.com/examples/detection.html">ShadowSDK Demo下载链接</a></li>
+            <li><a href="https://pdfobject.com/examples/embed-multiple-PDFs.html">ShadowSDK Model下载链接</a></li>
         </ul>
 
     </section>
 
+					<br />
+					<br />
+					<br />
+
+					<div role="contentinfo">
+						<div class="copyright_wrapper" style="text-align: center;">
+							<span class="copyright-txt">©2019</span>
+							<a href="http://www.beian.miit.gov.cn/" target="_blank" class="copyright-link copyright-txt"> 沪ICP备16035548号-1&nbsp;&nbsp;&nbsp;</a>
+							<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502004213" target="_blank" class="copyright-link copyright-txt"> 沪公网备31011502004213号 </a>
+						</div>
+						
+						<div class="copyright_wrapper" style="text-align: center">
+							<span class="copyright-txt">版权所有 Shadow Creator Information Technology Co.,Ltd. 保留所有权利。</span>
+						</div>
+						
+						<div class="copyright_wrapper" style="text-align: center">
+							<span class="copyright-txt">Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>.</span>
+						</div>
+					</div>
+                    
+					
+					
 </main>
 
 </div><!-- /flex-wrapper -->
@@ -474,7 +174,7 @@ PDFObject<span class="token punctuation">.</span><span class="token function">em
 <script src="./index_files/smooth-scroll.min.js.下载"></script>
 <script>
 //Embed the sample PDF
-PDFObject.embed("pdf/sample-3pp.pdf", "#example1");
+PDFObject.embed("API.pdf", "#API_PDF");
 </script>
 <script src="./index_files/site.js.下载"></script>
 
